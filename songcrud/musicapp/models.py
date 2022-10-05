@@ -21,7 +21,7 @@ class Song(models.Model):
         return f"{self.title} - {self.artiste_id}"
     
 class Lyric(models.Model):
-    content = models.TextField()
+    content = models.TextField(null=True)
     song_id = models.ForeignKey(Song, on_delete = models.CASCADE)
     
     def __str__(self):
