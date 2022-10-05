@@ -1,2 +1,2 @@
 # IG4X-Fullstack
-This is arepository on IG4X Fullstack course
+This is a repository on IG4X Fullstack course
