@@ -1,5 +1,21 @@
-from django.shortcuts import render
+from rest_framework import permissions
+from rest_framework import status
+from .models import Artiste, Song, Lyric
+from django.contrib.auth.models import User
+from rest_framework import routers, serializers, viewsets
+from .serializers import LyricSerializer, ArtisteSerializer, SongSerializer
 
-# Create your views here.
-def home():
-    return None
+
+class ArtisteListApiView(viewsets.ModelViewSet):
+    queryset = Artiste.objects.all()
+    serializer_class = ArtisteSerializer
+
+
+class SongListApiView(viewsets.ModelViewSet):
+    queryset = Song.objects.all()
+    serializer_class = SongSerializer
+
+
+class LyricListApiView(viewsets.ModelViewSet):
+    queryset = Lyric.objects.all()
+    serializer_class = LyricSerializer
