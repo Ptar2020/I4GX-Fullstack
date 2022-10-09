@@ -1,7 +1,4 @@
-from rest_framework import permissions
-from rest_framework import status
 from .models import Artiste, Song, Lyric
-from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 from .serializers import LyricSerializer, ArtisteSerializer, SongSerializer
 
