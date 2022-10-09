@@ -5,7 +5,7 @@ import django
 
 class Artiste(models.Model):
     first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50, null=True, blank=True)
     age = models.IntegerField()
     
     def __str__(self):
